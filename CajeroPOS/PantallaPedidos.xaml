@@ -1,0 +1,67 @@
+﻿<Window x:Class="CajeroPOS.PantallaPedidos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pedidos"
+        Height="400" Width="600"
+        WindowStartupLocation="CenterScreen"
+        
+       
+        Background="White">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- En preparación -->
+        <StackPanel>
+
+
+            <TextBlock Text="EN PREPARACIÓN"
+                      Visibility="Visible"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="Red"
+                       HorizontalAlignment="Center"
+                       
+                       Margin="0,0,0,20"/>
+
+            <ItemsControl x:Name="lstPreparacion">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   Foreground="Black"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,10"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
+        <!-- Listos -->
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="LISTOS"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="Lime"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <ItemsControl x:Name="lstListos">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   Foreground="Black"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,10"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</Window>
