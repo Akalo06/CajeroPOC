@@ -1,4 +1,4 @@
-# Cajero POC
+# Cajero POS
 
 ## Descripción del proyecto
 - **Idea general:** Aplicación tipo cajero para un restaurante de comida rápida que permite gestionar pedidos, generar facturas con código QR, controlar el estado de los pedidos y gestionar usuarios con roles.
